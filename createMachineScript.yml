@@ -11,8 +11,8 @@
         image_id: ami-0a32b54520652b8b1
         region: eu-north-1
         count: 1
-        vpc_subnet_id: subnet-xxxxxxx
-        security_group: sg-yyyyyy
+        vpc_subnet_id: subnet-ebdc6090
+        security_group: sg-007b3d7ae9debe853
         wait: yes
         state: running
         network:
