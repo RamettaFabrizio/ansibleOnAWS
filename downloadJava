@@ -1,0 +1,11 @@
+# Basic provisioning example
+- name: Ansible test
+  hosts: "{{ public_dns_name }}"
+  remote_user: ec2-user	
+  tasks:
+
+    - name: Download java
+      command: wget https://javadl.oracle.com/webapps/download/AutoDL?BundleId=248233_ce59cff5c23f4e2eaf4e778a117d4c5b -O java.tar.gz
+
+    - name: Extract Java
+      command: tar -zxvf java.tar.gz
