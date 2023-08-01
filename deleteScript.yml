@@ -1,0 +1,13 @@
+# Basic provisioning example
+- name: Ansible test
+  hosts: localhost
+  tasks:
+
+    - name: delete AWS instance using Ansible
+      amazon.aws.ec2_instance:
+        name: instance_proof_delete
+        region: eu-north-1
+        state: absent
+        filters:
+          dns-name: "{{ public_dns_name }}"
+      tags: delete_ec2
